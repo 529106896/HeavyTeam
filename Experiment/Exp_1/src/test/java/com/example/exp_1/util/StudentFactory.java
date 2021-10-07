@@ -39,7 +39,7 @@ public class StudentFactory {
 
     public StudentVo createStudentVoWithoutName(){
         StudentVo student = new StudentVo();
-        //student.setName(name);
+        student.setName("");
         student.setId("11920192203642");
         student.setAge(20);
         student.setMajor("软件工程");

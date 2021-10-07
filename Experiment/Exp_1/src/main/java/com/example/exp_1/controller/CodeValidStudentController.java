@@ -35,7 +35,7 @@ public class CodeValidStudentController {
     @PostMapping("")
     public Object createStudent(@RequestBody StudentVo studentVo){
         httpServletResponse.setContentType("application/json;charset=UTF-8");
-        if(null == studentVo.getName()){
+        if(null == studentVo.getName() || studentVo.getName().equals("") || studentVo.getName().trim().length() == 0){
             logger.info("学生姓名不能为空");
             httpServletResponse.setStatus(HttpServletResponse.SC_BAD_REQUEST);
             ReturnObject retObj = new ReturnObject();

@@ -56,6 +56,26 @@ public class StudentControllerTest {
     }
 
     @Test
+    public void createStudentTest1() throws Exception {
+
+        StudentVo s = StudentFactory.getInstance().createStudentVoWithoutName();
+        Student student = s.createStudent();
+
+        given(studentService.createStudent(any())).willReturn(student);
+
+        String studentJson = JacksonUtil.toJson(s);
+
+        String responseString = this.mvc.perform(post("/student").contentType("application/json;charset=UTF-8").content(studentJson))
+                .andExpect(status().isBadRequest())
+                .andExpect(content().contentType("application/json;charset=UTF-8"))
+                .andReturn().getResponse().getContentAsString();
+
+        String expectedResponse = "{\"errno\":0,\"errmsg\":\"学生姓名不能为空\",\"data\":null}";
+
+        JSONAssert.assertEquals(expectedResponse, responseString, true);
+    }
+
+    @Test
     public void searchByNameTest() throws Exception {
         given(studentService.searchByName(eq("袁佳哲"))).willReturn(StudentFactory.getInstance().createStudent("袁佳哲"));
 
