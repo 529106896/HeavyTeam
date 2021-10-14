@@ -17,6 +17,10 @@ public class OrderItem {
         this.orderItemPo = orderItemPo;
     }
 
+    public OrderItemPo getOrderItemPo() {
+        return this.orderItemPo;
+    }
+
     public Integer getId() {
         return orderItemPo.getId();
     }

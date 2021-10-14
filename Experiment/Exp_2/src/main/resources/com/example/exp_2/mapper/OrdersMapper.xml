@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.exp_2.mapper.OrdersMapper">
+    <!--完善1.namespace 2.sql语句的id和resultType-->
+
+    <insert id="createOrders" parameterType="OrdersPo" keyProperty="id" useGeneratedKeys="true">
+        insert into orders consignee,region_id,address,mobile,message,coupon_id,presale_id,groupon_id
+        values(#{consignee},#{regionId},#{address},#{mobile},#{message},#{couponId},#{presaleId},#{grouponId},CURRENT_TIMESTAMP)
+    </insert>
+
+    <insert id="createOrderItem" parameterType="OrderItemPo" keyProperty="id" useGeneratedKeys="true">
+        insert into order_item
+        sku_id, quantity, coupon_activity_id
+        values(#{goodsSkuId},#{quantity},#{couponActivityId})
+    </insert>
+
+    <select id="findOrdersWithItem" parameterType="OrdersPo" resultMap="OrdersWithItemMap">
+        select
+        os.id as id,
+        os.order_sn,
+        os.order_type,
+        os.state,
+        os.substate,
+        os.gmt_create,
+        os.gmt_modified,
+        os.confirm_time,
+        os.origin_price,
+        os.discount_price,
+        os.freight_price,
+        os.rebate_num,
+        os.message,
+        os.region_id,
+        os.address,
+        os.mobile,
+        os.consignee,
+        os.coupon_id,
+        os.groupon_id,
+        os.presale_id,
+        os.shipment_sn
+        from orders os left join order_item oi
+        on os.id = oi.order_id
+        where #{id} = os.id
+    </select>
+
+    <resultMap id="OrdersWithItemMap" type="OrdersPo" autoMapping="true">
+        <id property="id" column="id"/>
+        <collection property="orderItemPoList" ofType="com.example.exp_2.model.OrderItemPo" autoMapping="true">
+            <id property="id" column="order_item_id"/>
+            <result property="goodsSkuId" column="order_item_goods_sku_id"/>
+            <result property="orderId" column="order_item_order_id"/>
+            <result property="quantity" column="order_item_quantity"/>
+            <result property="price" column="order_item_price"/>
+            <result property="discount" column="order_item_discount"/>
+            <result property="couponActivityId" column="order_item_coupon_activity_id"/>
+            <result property="beShareId" column="order_item_be_share_id"/>
+        </collection>
+    </resultMap>
+</mapper>
