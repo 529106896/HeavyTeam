@@ -23,7 +23,6 @@ public interface OrdersMapper {
      */
     int createOrderItem(OrderItemPo orderItemPo);
 
-
     /**
      * 用OrdersPo对象找
      * @param ordersPo 条件对象，所有条件为AND，仅有索引的值可以作为条件
@@ -31,10 +30,10 @@ public interface OrdersMapper {
      */
     List<OrdersPo> findOrders(OrdersPo ordersPo);
 
-    /**
-     * 用OrdersPo对象找
-     * @param ordersPo 条件对象，所有条件为AND，仅有索引的值可以作为条件
-     * @return OrdersPo对象列表
-     */
-    List<OrdersPo> findOrdersWithItem(OrdersPo ordersPo);
+
+    // 以下为测试用Mapper接口，打包时记得删掉
+    List<OrdersPo> findOrdersTest(OrdersPo ordersPo);
+    List<OrderItemPo> findOrderItemsTest(OrderItemPo orderItemPo);
+    List<OrdersPo> findOrdersWithItemTest(OrdersPo ordersPo);
+    //List<Orders>
 }

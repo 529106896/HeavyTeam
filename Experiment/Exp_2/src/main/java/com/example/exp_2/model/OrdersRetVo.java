@@ -1,5 +1,7 @@
 package com.example.exp_2.model;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,6 +9,7 @@ import java.util.List;
  * 订单视图对象
  */
 
+@Data
 public class OrdersRetVo {
     private Integer id;
 
@@ -52,40 +55,144 @@ public class OrdersRetVo {
 
     private String shipmentSn;
 
-    private List<OrderItemRetVo> orderItemList;
+    private List<OrderItemRetVo> orderItems;
 
     public OrdersRetVo(Orders orders) {
+
         this.id = orders.getId();
+
         this.orderSn = orders.getOrderSn();
-        this.pid = orders.getPid();
+
+        if (orders.getPid() != null) {
+            this.pid = orders.getPid();
+        } else {
+            this.pid = 0;
+        }
 
         if (null != orders.getOrderType()) {
             this.orderType = orders.getOrderType().getCode();
+        } else {
+            this.orderType = 0;
         }
 
         if (null != orders.getState()) {
            this.state = orders.getState().getCode();
+        } else {
+            this.state = 0;
         }
 
         if (null != orders.getSubState()) {
             this.subState = orders.getSubState().getCode();
+        } else {
+            this.subState = 0;
         }
 
-        this.gmtCreate = orders.getGmtCreate().toString();
-        this.gmtModified = orders.getGmtModified().toString();
-        this.confirmTime = orders.getConfirmTime().toString();
-        this.originPrice = orders.getOriginPrice();
-        this.discountPrice = orders.getDiscountPrice();
-        this.freightPrice = orders.getFreightPrice();
-        this.rebateNum = orders.getRebateNum();
-        this.message = orders.getMessage();
-        this.regionId = orders.getRegionId();
-        this.address = orders.getAddress();
+        if (null != orders.getGmtCreate()) {
+            if (orders.getGmtCreate().toString().contains("T"))
+            {
+                this.gmtCreate = orders.getGmtCreate().toString().replaceAll("T", " ");
+            } else {
+                this.gmtCreate = orders.getGmtCreate().toString();
+            }
+        } else {
+            this.gmtCreate = "string";
+        }
+
+        if (null != orders.getGmtModified())
+        {
+            if (orders.getGmtModified().toString().contains("T"))
+            {
+                this.gmtModified = orders.getGmtModified().toString().replaceAll("T", " ");
+            } else {
+                this.gmtModified = orders.getGmtModified().toString();
+            }
+        } else {
+            this.gmtModified = "string";
+        }
+
+
+        //this.gmtModified = orders.getGmtModified().toString().replaceAll("T", " ");
+
+        if (null != orders.getConfirmTime()) {
+            this.confirmTime = orders.getConfirmTime().toString();
+        }
+        else {
+            this.confirmTime = "string";
+        }
+
+        if (orders.getOriginPrice() != null){
+            this.originPrice = orders.getOriginPrice();
+        } else {
+            this.originPrice = 0;
+        }
+
+        if (this.discountPrice != null) {
+            this.discountPrice = orders.getDiscountPrice();
+        } else {
+            this.discountPrice = 0;
+        }
+
+        if (null != orders.getFreightPrice()) {
+            this.freightPrice = orders.getFreightPrice();
+        }else {
+            this.freightPrice = 0;
+        }
+
+        if (null != orders.getRebateNum()) {
+            this.rebateNum = orders.getRebateNum();
+        } else {
+            this.rebateNum = 0;
+        }
+
+        if (null != orders.getMessage()) {
+            this.message = orders.getMessage();
+        } else
+        {
+            this.message = "string";
+        }
+
+        if (null != orders.getRegionId()) {
+            this.regionId = orders.getRegionId();
+        } else {
+            this.regionId = 0;
+        }
+
+        if (null != orders.getAddress())
+        {
+            this.address = orders.getAddress();
+        }
+        else {
+            this.address = "string";
+        }
+
         this.mobile = orders.getMobile();
+
         this.consignee = orders.getConsignee();
-        this.couponId = orders.getCouponId();
-        this.presaleId = orders.getPresaleId();
-        this.shipmentSn = orders.getShipmentSn();
+
+        if (orders.getCouponId() != null) {
+            this.couponId = orders.getCouponId();
+        }
+        else {
+            this.couponId = 0;
+        }
+
+        if (orders.getPresaleId() != null) {
+            this.presaleId = orders.getPresaleId();
+        } else {
+            this.presaleId = 0;
+        }
+
+        if (orders.getShipmentSn() != null) {
+            this.shipmentSn = orders.getShipmentSn();
+        } else {
+            this.shipmentSn = "string";
+        }
+
+        if (orders.getGrouponId() != null) {
+            this.grouponId = orders.getGrouponId();
+        } else {
+            this.grouponId = 0;
+        }
 
         if (null != orders.getOrderItemList()) {
             List<OrderItemRetVo> orderItemList = new ArrayList<>(orders.getOrderItemList().size());
@@ -94,7 +201,7 @@ public class OrdersRetVo {
                 OrderItemRetVo orderItemRetVo = new OrderItemRetVo(orderItem);
                 orderItemList.add(orderItemRetVo);
             }
-            this.orderItemList = orderItemList;
+            this.orderItems = orderItemList;
         }
     }
 

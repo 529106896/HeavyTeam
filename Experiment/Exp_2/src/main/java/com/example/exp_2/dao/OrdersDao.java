@@ -22,39 +22,42 @@ public class OrdersDao {
     @Autowired
     private OrdersMapper ordersMapper;
 
-    public ReturnObject<List<Orders>> findOrders(OrdersPo ordersPo){
-        logger.info("findOrders: ordersPo ="+ordersPo);
-        List<OrdersPo> ordersPos=ordersMapper.findOrders(ordersPo);
-        logger.info("findOrders: ordersPos ="+ordersPos);
+    public ReturnObject<List<Orders>> findOrders(OrdersPo ordersPo) {
 
-        List<Orders> retOrders=new ArrayList<>(ordersPos.size());
+        logger.info("findOrders: ordersPo.id = " + ordersPo.getId());
 
-        for (OrdersPo orderPo : ordersPos){
-            Orders item = new Orders(orderPo);
-            List<OrderItem> orderItemList=new ArrayList<>(orderPo.getOrderItemPoList().size());
+        List<OrdersPo> ordersPos = ordersMapper.findOrders(ordersPo);
 
-            for (OrderItemPo orderItemPo:orderPo.getOrderItemPoList()){
+        List<Orders> retOrders = new ArrayList<>(ordersPos.size());
+
+        for (OrdersPo o : ordersPos) {
+            logger.info("findOrders: ordersPo = " + o);
+            List<OrderItemPo> orderItemPos = o.getOrderItemPoList();
+            Orders orders = new Orders(o);
+            //logger.info("findOrders: ordersPo.state = " + o.getState());
+            //logger.info("findOrders: orders.state = " + orders.getState());
+            List<OrderItem> orderItemList = new ArrayList<>(orderItemPos.size());
+            for (OrderItemPo orderItemPo : orderItemPos) {
                 OrderItem orderItem = new OrderItem(orderItemPo);
                 orderItemList.add(orderItem);
             }
-
-            item.setOrderItemList(orderItemList);
-            retOrders.add(item);
+            orders.setOrderItemList(orderItemList);
+            retOrders.add(orders);
         }
-        logger.info("findOrders: retOrders = "+retOrders);
         return new ReturnObject<>(retOrders);
     }
 
     public ReturnObject<Orders> createOrders(Orders orders){
         OrdersPo ordersPo = orders.getOrdersPo();
         String seqNum = genSeqNum();
-        ordersPo.setOrderSn("G"+seqNum);
+        ordersPo.setOrderSn(seqNum);
 
         int ret = ordersMapper.createOrders(ordersPo);
         if(orders.getOrderItemList()!=null){
             for (OrderItem orderItem : orders.getOrderItemList()){
                 OrderItemPo orderItemPo = orderItem.getOrderItemPo();
                 orderItemPo.setOrderId(orders.getId());
+                orderItemPo.setPrice(5);
                 ret = ordersMapper.createOrderItem(orderItemPo);
             }
         }

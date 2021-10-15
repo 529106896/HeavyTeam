@@ -5,7 +5,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.validation.constraints.NotBlank;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,10 +20,9 @@ public class OrdersVo {
 
     private Integer regionId;
 
-    @NotBlank
     private String address;
 
-    @NotBlank
+    //@NotBlank
     private String mobile;
 
     private String message;
@@ -45,6 +43,7 @@ public class OrdersVo {
         orders.setMessage(this.message);
         orders.setMobile(this.mobile);
         orders.setCouponId(this.couponId);
+        orders.setGrouponId(this.grouponId);
         orders.setPresaleId(this.presaleId);
 
         if(null != this.orderItemList) {
@@ -58,6 +57,8 @@ public class OrdersVo {
             orders.setOrderItemList(newOrderItemList);
         }
 
+//        logger.info("createOrders : orders = " + orders);
+//        logger.info("createOrders : orders.List = " + orders.getOrderItemList());
         return orders;
     }
 }

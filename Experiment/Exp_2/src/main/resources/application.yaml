@@ -21,7 +21,7 @@ spring:
     druid:
       initial-size: 3
       min-idle: 3
-      max-active: 100
+      max-active: 300
       max-wait: 60000
       stat-view-servlet:
         login-username: admin
@@ -35,9 +35,13 @@ spring:
           slow-sql-millis: 100
 
       validation-query: select 1
+
   sql:
     init:
       encoding: utf-8
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
 
 mybatis:
   type-aliases-package: com.example.exp_2.model

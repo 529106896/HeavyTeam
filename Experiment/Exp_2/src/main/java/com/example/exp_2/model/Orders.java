@@ -13,14 +13,15 @@ public class Orders implements VoObject {
      */
     public enum Status {
         CREATED(0,"已创建"),
-        PAYED(1,"已支付"),
-        CANCELED(2,"已取消");
+        TIMEOUT(1,"超时"),
+        CANCELED(2,"已取消"),
+        PAYED(3, "已支付");
 
         private static final Map<Integer, Orders.Status> stateMap;
 
         static { //由类加载机制，静态块初始加载对应的枚举属性到map中，而不用每次取属性时，遍历一次所有枚举值
             stateMap = new HashMap();
-            for (Orders.Status enum1 : values()) {
+            for (Status enum1 : values()) {
                 stateMap.put(enum1.code, enum1);
             }
         }
@@ -33,7 +34,7 @@ public class Orders implements VoObject {
             this.description=description;
         }
 
-        public static Orders.Status getStatusByCode(Integer code){
+        public static Status getStatusByCode(Integer code){
             return stateMap.get(code);
         }
 
