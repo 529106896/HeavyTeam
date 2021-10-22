@@ -26,10 +26,14 @@ public class OrdersControllerIntegrationTest {
 
     @Test
     public void getOrdersById() throws Exception {
+        //long startTime = System.currentTimeMillis();
         String responseString = this.mvc.perform(get("/orders/100"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json;charset=UTF-8"))
                 .andReturn().getResponse().getContentAsString();
+        //long endTime = System.currentTimeMillis();
+
+        //System.out.println("left join in Test spend " + (endTime - startTime));
 
         String expectedResponse = "{\"errno\":0,\"errmsg\":\"成功\",\"data\":{\"id\":100,\"orderSn\":\"2016102545959\",\"pid\":0,\"orderType\":0,\"state\":3,\"subState\":0,\"gmtCreate\":\"2020-12-10 19:29:33\",\"gmtModified\":\"2020-12-10 19:29:33\",\"confirmTime\":\"string\",\"originPrice\":0,\"discountPrice\":0,\"freightPrice\":0,\"rebateNum\":0,\"message\":\"string\",\"regionId\":0,\"address\":\"string\",\"mobile\":\"13959288888\",\"consignee\":\"刘华\",\"couponId\":0,\"grouponId\":0,\"presaleId\":0,\"shipmentSn\":\"string\",\"orderItems\":[{\"skuId\":341,\"orderId\":100,\"name\":\"string\",\"quantity\":1,\"price\":0,\"discount\":0,\"couponActId\":0,\"beSharedId\":0},{\"skuId\":342,\"orderId\":100,\"name\":\"string\",\"quantity\":1,\"price\":0,\"discount\":0,\"couponActId\":0,\"beSharedId\":0}]}}";
 
@@ -38,10 +42,14 @@ public class OrdersControllerIntegrationTest {
 
     @Test
     public void getOrdersByIdContrast() throws Exception {
+        //long startTime = System.currentTimeMillis();
         String responseString = this.mvc.perform(get("/orders/contrast/100"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json;charset=UTF-8"))
                 .andReturn().getResponse().getContentAsString();
+        //long endTime = System.currentTimeMillis();
+
+        //System.out.println("single search in Test spend " + (endTime - startTime));
 
         String expectedResponse = "{\"errno\":0,\"errmsg\":\"成功\",\"data\":{\"id\":100,\"orderSn\":\"2016102545959\",\"pid\":0,\"orderType\":0,\"state\":3,\"subState\":0,\"gmtCreate\":\"2020-12-10 19:29:33\",\"gmtModified\":\"2020-12-10 19:29:33\",\"confirmTime\":\"string\",\"originPrice\":0,\"discountPrice\":0,\"freightPrice\":0,\"rebateNum\":0,\"message\":\"string\",\"regionId\":0,\"address\":\"string\",\"mobile\":\"13959288888\",\"consignee\":\"刘华\",\"couponId\":0,\"grouponId\":0,\"presaleId\":0,\"shipmentSn\":\"string\",\"orderItems\":[{\"skuId\":341,\"orderId\":100,\"name\":\"string\",\"quantity\":1,\"price\":0,\"discount\":0,\"couponActId\":0,\"beSharedId\":0},{\"skuId\":342,\"orderId\":100,\"name\":\"string\",\"quantity\":1,\"price\":0,\"discount\":0,\"couponActId\":0,\"beSharedId\":0}]}}";
 

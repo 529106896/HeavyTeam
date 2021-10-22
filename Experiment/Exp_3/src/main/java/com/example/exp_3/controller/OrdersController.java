@@ -33,6 +33,7 @@ public class OrdersController {
 
     @GetMapping("{id}")
     public Object getOrdersById(@PathVariable("id") Integer id) {
+        //long startTime = System.currentTimeMillis();
         ReturnObject<VoObject> returnObject = ordersService.findById(id);
         ResponseCode code = returnObject.getCode();
         switch (code){
@@ -41,6 +42,8 @@ public class OrdersController {
                 return ResponseUtil.fail(returnObject.getCode(), returnObject.getErrmsg());
             case OK:
                 OrdersRetVo ordersRetVo = (OrdersRetVo) returnObject.getData().createVo();
+                //long endTime = System.currentTimeMillis();
+                //System.out.println("OrdersController: left join total spend " + (endTime - startTime));
                 return ResponseUtil.ok(ordersRetVo);
             default:
                 return ResponseUtil.fail(code);
@@ -49,6 +52,7 @@ public class OrdersController {
 
     @GetMapping("contrast/{id}")
     public Object getOrdersByIdContrast(@PathVariable("id") Integer id) {
+        //long startTime = System.currentTimeMillis();
         ReturnObject<VoObject> returnObject = ordersService.findByIdContrast(id);
         ResponseCode code = returnObject.getCode();
         switch (code){
@@ -57,6 +61,8 @@ public class OrdersController {
                 return ResponseUtil.fail(returnObject.getCode(), returnObject.getErrmsg());
             case OK:
                 OrdersRetVo ordersRetVo = (OrdersRetVo) returnObject.getData().createVo();
+                //long endTime = System.currentTimeMillis();
+                //System.out.println("OrdersController: single search total spend " + (endTime - startTime));
                 return ResponseUtil.ok(ordersRetVo);
             default:
                 return ResponseUtil.fail(code);

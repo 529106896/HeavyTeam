@@ -25,7 +25,7 @@ import java.util.List;
  */
 public class  Swagger2Configuration {
 
-    public static final String SWAGGER_SCAN_BASE_PACKAGE = "com.example.exp_2";
+    public static final String SWAGGER_SCAN_BASE_PACKAGE = "com.example.exp_3";
 
     public static final String VERSION = "1.0.0";
 
@@ -50,7 +50,7 @@ public class  Swagger2Configuration {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
-                .title("JavaEE实验二")
+                .title("JavaEE实验三")
                 //描述
                 .description("订单 Restful API接口")
                 //创建人

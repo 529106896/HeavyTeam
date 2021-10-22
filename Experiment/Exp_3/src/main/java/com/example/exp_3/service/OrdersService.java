@@ -28,6 +28,7 @@ public class OrdersService {
      * @return 订单对象
      */
     public ReturnObject<VoObject> findById(Integer id) {
+       //long startTime = System.currentTimeMillis();
         OrdersPo queryObj = new OrdersPo();
         queryObj.setId(id);
         ReturnObject<VoObject> retOrders = null;
@@ -42,10 +43,13 @@ public class OrdersService {
         }else {
             retOrders = new ReturnObject<>(returnObject.getCode(), returnObject.getErrmsg());
         }
+        //long endTime = System.currentTimeMillis();
+        //System.out.println("OrdersService : findById spend " + (endTime - startTime));
         return retOrders;
     }
 
     public ReturnObject<VoObject> findByIdContrast(Integer id) {
+        //long startTime = System.currentTimeMillis();
         OrdersPo queryObj = new OrdersPo();
         queryObj.setId(id);
         ReturnObject<VoObject> retOrders = null;
@@ -60,6 +64,8 @@ public class OrdersService {
         }else {
             retOrders = new ReturnObject<>(returnObject.getCode(), returnObject.getErrmsg());
         }
+        long endTime = System.currentTimeMillis();
+        //System.out.println("OrdersService : findByIdContrast spend " + (endTime - startTime));
         return retOrders;
     }
 

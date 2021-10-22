@@ -28,6 +28,7 @@ spring:
         login-password: 123456
         enabled: true
         url-pattern: /druid/*
+        allow: 172.16.1.99
 
       filter:
         stat:

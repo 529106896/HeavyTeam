@@ -24,7 +24,10 @@ public class OrdersDao {
 
     public ReturnObject<List<Orders>> findOrders(OrdersPo ordersPo) {
 
+        //long startTime = System.currentTimeMillis();
         List<OrdersPo> ordersPos = ordersMapper.findOrders(ordersPo);
+        //long endTime = System.currentTimeMillis();
+        //System.out.println("OrdersDao: findOrders: find order spend " + (endTime - startTime));
 
         List<Orders> retOrders = new ArrayList<>(ordersPos.size());
 
@@ -39,6 +42,8 @@ public class OrdersDao {
             orders.setOrderItemList(orderItemList);
             retOrders.add(orders);
         }
+        //long endTime = System.currentTimeMillis();
+        //System.out.println("ordersDao : findOrders: left join total spend " + (endTime - startTime));
         return new ReturnObject<>(retOrders);
     }
 
@@ -63,11 +68,10 @@ public class OrdersDao {
     public ReturnObject<List<Orders>> findOrdersWithItems(OrdersPo ordersPo) {
         List<OrdersPo> ordersPos = ordersMapper.findOrdersWithoutItems(ordersPo);
 
-        //logger.info("OrdersDao: findOrdersWithItems: ordersPos = " + ordersPos.get(0));
-
         List<Orders> retOrders = new ArrayList<>(ordersPos.size());
 
         for (OrdersPo o : ordersPos) {
+
             List<OrderItemPo> orderItemPos = ordersMapper.findOrderItems(o.getId());
 
             Orders orders = new Orders(o);
@@ -78,6 +82,7 @@ public class OrdersDao {
                 orderItemList.add(orderItem);
             }
             orders.setOrderItemList(orderItemList);
+            //System.out.println(orders.getOrderItemList());
             retOrders.add(orders);
         }
         return new ReturnObject<>(retOrders);
