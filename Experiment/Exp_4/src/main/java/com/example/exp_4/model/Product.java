@@ -49,7 +49,7 @@ public class Product implements VoObject {
         this.productPo = new ProductPo();
     }
 
-    private Product(ProductPo productPo) {
+    public Product(ProductPo productPo) {
         this.productPo = productPo;
     }
 

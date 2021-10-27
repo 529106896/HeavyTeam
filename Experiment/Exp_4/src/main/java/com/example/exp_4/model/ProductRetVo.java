@@ -1,8 +1,11 @@
 package com.example.exp_4.model;
 
+import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 public class ProductRetVo {
 
     private Integer id;
@@ -33,7 +36,7 @@ public class ProductRetVo {
 
     private Boolean shareable;
 
-    private List<GoodsRetVo> goods;
+    private GoodsRetVo goods;
 
     public ProductRetVo(Product product) {
 
@@ -116,7 +119,7 @@ public class ProductRetVo {
                 GoodsRetVo goodsRetVo = new GoodsRetVo(goods);
                 goodsList.add(goodsRetVo);
             }
-            this.goods = goodsList;
+            this.goods = goodsList.get(0);
         }
     }
 }

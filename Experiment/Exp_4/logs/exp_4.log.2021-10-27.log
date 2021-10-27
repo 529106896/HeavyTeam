@@ -1,0 +1,78 @@
+2021-10-27 21:22:21.422 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 1756 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 21:22:21.428 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 21:22:28.465 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 7.422 seconds (JVM running for 9.537)
+2021-10-27 21:24:39.817 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 11444 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 21:24:39.824 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 21:24:44.305 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.861 seconds (JVM running for 5.813)
+2021-10-27 21:26:54.872 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 17528 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 21:26:54.878 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 21:26:59.170 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.67 seconds (JVM running for 5.638)
+2021-10-27 21:31:22.450 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 4404 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 21:31:22.455 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 21:31:26.578 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.514 seconds (JVM running for 5.427)
+2021-10-27 21:32:55.896 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 17536 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 21:32:55.900 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 21:32:59.999 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.453 seconds (JVM running for 5.361)
+2021-10-27 21:34:17.152 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 2764 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 21:34:17.157 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 21:34:21.271 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.447 seconds (JVM running for 5.367)
+2021-10-27 21:35:02.240 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 17524 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 21:35:02.245 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 21:35:06.471 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.561 seconds (JVM running for 5.477)
+2021-10-27 21:36:31.013 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 17772 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 21:36:31.019 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 21:36:35.146 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.472 seconds (JVM running for 5.382)
+2021-10-27 21:38:23.816 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 1472 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 21:38:23.821 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 21:38:27.902 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.407 seconds (JVM running for 5.339)
+2021-10-27 21:39:10.331 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 11816 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 21:39:10.336 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 21:39:14.483 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.483 seconds (JVM running for 5.405)
+2021-10-27 21:43:29.553 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 18336 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 21:43:29.561 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 21:43:33.986 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.79 seconds (JVM running for 5.797)
+2021-10-27 22:30:56.093 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 10196 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 22:30:56.098 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 22:31:00.292 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.531 seconds (JVM running for 5.457)
+2021-10-27 22:36:00.775 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 18296 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 22:36:00.780 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 22:36:04.869 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.423 seconds (JVM running for 5.352)
+2021-10-27 22:36:49.586 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 10684 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 22:36:49.591 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 22:36:53.797 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.55 seconds (JVM running for 5.484)
+2021-10-27 22:37:44.772 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 14964 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 22:37:44.778 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 22:37:49.012 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.569 seconds (JVM running for 5.497)
+2021-10-27 22:39:24.478 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 3748 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 22:39:24.484 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 22:39:28.699 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.549 seconds (JVM running for 5.493)
+2021-10-27 23:20:52.264 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 15288 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 23:20:52.270 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 23:20:56.527 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.597 seconds (JVM running for 5.617)
+2021-10-27 23:21:10.705 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 18888 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 23:21:10.711 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 23:21:15.186 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.829 seconds (JVM running for 5.801)
+2021-10-27 23:21:47.173 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 1300 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 23:21:47.178 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 23:21:51.501 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.698 seconds (JVM running for 5.628)
+2021-10-27 23:22:11.054 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 18964 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 23:22:11.060 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 23:22:15.358 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.658 seconds (JVM running for 5.584)
+2021-10-27 23:25:42.669 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 18784 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 23:25:42.674 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 23:25:46.971 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.646 seconds (JVM running for 5.61)
+2021-10-27 23:27:35.878 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 7404 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 23:27:35.884 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 23:27:40.172 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.663 seconds (JVM running for 5.582)
+2021-10-27 23:29:05.922 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 11760 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 23:29:05.926 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 23:29:10.138 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.543 seconds (JVM running for 5.525)
+2021-10-27 23:29:49.083 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 16472 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 23:29:49.089 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 23:29:53.466 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.725 seconds (JVM running for 5.687)
+2021-10-27 23:30:27.576 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 11340 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 23:30:27.580 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 23:30:31.840 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.603 seconds (JVM running for 5.565)
+2021-10-27 23:30:46.400 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Starting ProductControllerIntegrationTest using Java 11.0.11 on DESKTOP-OR6COI9 with PID 19304 (started by 529106896 in E:\lesson\JavaEE_Exp\Exp_4)
+2021-10-27 23:30:46.405 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - No active profile set, falling back to default profiles: default
+2021-10-27 23:30:50.745 [main] INFO  com.example.exp_4.ProductControllerIntegrationTest - Started ProductControllerIntegrationTest in 4.737 seconds (JVM running for 5.695)

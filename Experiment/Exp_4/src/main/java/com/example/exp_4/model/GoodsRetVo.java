@@ -1,5 +1,8 @@
 package com.example.exp_4.model;
 
+import lombok.Data;
+
+@Data
 public class GoodsRetVo {
 
     private Integer id;
@@ -54,12 +57,12 @@ public class GoodsRetVo {
 
         if(null != goods.getGmtModified()) {
             if(goods.getGmtModified().toString().contains("T")) {
-                this.gmtCreate = goods.getGmtModified().toString().replaceAll("T", " ");
+                this.gmtModified = goods.getGmtModified().toString().replaceAll("T", " ");
             } else {
-                this.gmtCreate = goods.getGmtModified().toString();
+                this.gmtModified = goods.getGmtModified().toString();
             }
         } else {
-            this.gmtCreate = "string";
+            this.gmtModified = "string";
         }
 
         if(null != goods.getDisabled()) {
