@@ -2,6 +2,7 @@ package com.example.exp_4.model;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Product implements VoObject {
@@ -150,6 +151,16 @@ public class Product implements VoObject {
 
     public LocalDateTime getGmtModified() {
         return productPo.getGmtModified();
+    }
+
+    private List<Goods> goodsList;
+
+    public void setGoodsList(List<Goods> goodsList) {
+        this.goodsList = goodsList;
+    }
+
+    public List<Goods> getGoodsList() {
+        return this.goodsList;
     }
 
     public boolean canEqual(Object other) {

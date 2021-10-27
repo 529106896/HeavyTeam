@@ -1,5 +1,6 @@
 package com.example.exp_4.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductRetVo {
@@ -32,7 +33,7 @@ public class ProductRetVo {
 
     private Boolean shareable;
 
-    private List<GoodsRetVo> goodsRetVoList;
+    private List<GoodsRetVo> goods;
 
     public ProductRetVo(Product product) {
 
@@ -107,5 +108,15 @@ public class ProductRetVo {
         }
 
         this.shareable = false;
+
+        if(null != product.getGoodsList()) {
+            List<GoodsRetVo> goodsList = new ArrayList<>(product.getGoodsList().size());
+
+            for(Goods goods : product.getGoodsList()) {
+                GoodsRetVo goodsRetVo = new GoodsRetVo(goods);
+                goodsList.add(goodsRetVo);
+            }
+            this.goods = goodsList;
+        }
     }
 }
