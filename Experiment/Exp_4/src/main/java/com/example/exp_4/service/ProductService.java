@@ -61,4 +61,24 @@ public class ProductService {
 
         return retProduct;
     }
+
+    public ReturnObject<VoObject> findProductByIdWithRedis(Integer id) {
+        ProductPo queryObj = new ProductPo();
+        queryObj.setId(id);
+
+        ReturnObject<VoObject> retProduct = null;
+        ReturnObject<List<Product>> returnObject = productDao.findProductWithRedis(queryObj);
+
+        if(returnObject.getCode().equals(ResponseCode.OK)) {
+            if(returnObject.getData().size() == 1) {
+                retProduct = new ReturnObject<>(returnObject.getData().get(0));
+            } else {
+                retProduct = new ReturnObject<>(ResponseCode.RESOURCE_ID_NOT_EXIST);
+            }
+        } else {
+            retProduct = new ReturnObject<>(returnObject.getCode(), returnObject.getErrmsg());
+        }
+
+        return retProduct;
+    }
 }

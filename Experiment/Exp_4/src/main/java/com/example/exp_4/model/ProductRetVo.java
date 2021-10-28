@@ -72,8 +72,8 @@ public class ProductRetVo {
 
         this.inventory = 0;
 
-        if(null != product.getStatus()) {
-            this.state = product.getStatus().getCode();
+        if(null != product.getState()) {
+            this.state = product.getState();
         } else {
             this.state = 0;
         }

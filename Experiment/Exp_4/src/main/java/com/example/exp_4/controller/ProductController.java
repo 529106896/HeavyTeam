@@ -61,4 +61,22 @@ public class ProductController {
                 return ResponseUtil.fail(code);
         }
     }
+
+    @GetMapping("/redis/{id}")
+    public Object getProductByIdWithRedis(@PathVariable("id") Integer id) {
+        ReturnObject<VoObject> returnObject = productService.findProductByIdWithRedis(id);
+        ResponseCode code = returnObject.getCode();
+        switch (code) {
+            case RESOURCE_ID_NOT_EXIST:
+                httpServletResponse.setStatus(HttpStatus.NOT_FOUND.value());
+                return ResponseUtil.fail(returnObject.getCode(), returnObject.getErrmsg());
+            case OK:
+                ProductRetVo productRetVo = (ProductRetVo) returnObject.getData().createVo();
+                //System.out.println(returnObject.getData());
+                //System.out.println(returnObject.getData().createVo());
+                return ResponseUtil.ok(productRetVo);
+            default:
+                return ResponseUtil.fail(code);
+        }
+    }
 }

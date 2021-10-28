@@ -1,11 +1,12 @@
 package com.example.exp_4.model;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Product implements VoObject {
+public class Product implements VoObject, Serializable {
 
     public enum Status {
         CREATED(0, "正常"),
@@ -113,12 +114,12 @@ public class Product implements VoObject {
         return productPo.getImageUrl();
     }
 
-    public void setStatus(Status status) {
-        productPo.setState(status.getCode());
+    public void setState(Integer status) {
+        productPo.setState(status);
     }
 
-    public Status getStatus() {
-        return Status.getStatusByCode(productPo.getState());
+    public Integer getState() {
+        return 0;
     }
 
     public void setDetail(String detail) {
